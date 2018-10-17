@@ -21,11 +21,11 @@ fs.stat('upload', (err, stats) => {
 
 fs.readdir('html', (err, files) => {
     if (err) {
-        console.log(err)
+        console.log(err);
         return false
     } else {
         // 判断是目录还是文件
-        console.log(files)
+        console.log(files);
         for (let i = 0; i < files.length; i++) {
             fs.stat('html/'+files[i], (error, stats) => {
                 // 循环判断是目录还是文件 --- 异步;
