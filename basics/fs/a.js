@@ -35,6 +35,6 @@ fs.readdir('html', (err, files) => {
             })
         }
     }
-})
+});
 
 
