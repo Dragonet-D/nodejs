@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-let mime = require('./model/util');
+let mimeModel = require('./model/util');
 
 http.createServer((req, res) => {
   let pathname = req.url;
@@ -9,7 +9,7 @@ http.createServer((req, res) => {
     pathname = '/index.html'
   }
   // 获取文件后缀名
-  let extname = pathname.extname(pathname);
+  let extname = path.extname(pathname);
   if (pathname !== '/favicon.ico') {
     // 文件操作
     fs.readFile(`static/${pathname}`, (err, result) => {
@@ -20,7 +20,9 @@ http.createServer((req, res) => {
           res.end();
         })
       } else {
-        res.writeHead(200, {'Content-Type': 'text/html;charset="utf-8"'});
+        // 获取文件类型
+        let mime = mimeModel.getMime(extname);
+        res.writeHead(200, {'Content-Type': `${mime};charset="utf-8"`});
         res.write(result);
         res.end();
       }
