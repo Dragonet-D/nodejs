@@ -28,6 +28,6 @@ http.createServer((req, res) => {
         res.write(result);
         res.end();
       }
-    })
+    });
   }
 }).listen(8080);
