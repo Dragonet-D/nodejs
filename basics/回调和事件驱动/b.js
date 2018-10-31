@@ -14,5 +14,5 @@ getData();
 
 // 监听广播数据
 EventEmitter.on('data', (mime) => {
-  console.log(mime);
+  console.log(mime.toString());
 });
