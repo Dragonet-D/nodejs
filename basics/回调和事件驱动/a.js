@@ -2,8 +2,12 @@
 const fs = require('fs');
 
 console.log(1);
-function getData() {
+function getData(callBack) {
   fs.readFile('a.json', (err, data) => {
-
+    callBack(data);
   });
 }
+
+getData((data) => {
+  console.log(data);
+});
