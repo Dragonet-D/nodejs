@@ -1,0 +1,4 @@
+#> mongo db note
+```mongo
+    
+```
