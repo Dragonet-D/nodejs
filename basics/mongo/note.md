@@ -33,5 +33,5 @@
     db.userinfo.find({age: 22});
     db.userinfo.find({age: {$gt: 22}}); 大于
     db.userinfo.find({age: {$lt: 22}}); 小于
-    
+    db.userinfo.find({age: {$gte: 22}}); 大于等于
 ```
