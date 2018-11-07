@@ -34,4 +34,6 @@
     db.userinfo.find({age: {$gt: 22}}); 大于
     db.userinfo.find({age: {$lt: 22}}); 小于
     db.userinfo.find({age: {$gte: 22}}); 大于等于
+    db.userinfo.find({age: {$lte: 22}}); 小于等于
+    db.userinfo.find({age: /mongo/}); 正则查询name中有mongo字段的数据
 ```
