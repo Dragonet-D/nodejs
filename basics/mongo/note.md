@@ -36,4 +36,18 @@
     db.userinfo.find({age: {$gte: 22}}); 大于等于
     db.userinfo.find({age: {$lte: 22}}); 小于等于
     db.userinfo.find({age: /mongo/}); 正则查询name中有mongo字段的数据
+    db.userinfo.find({name: "zhangsan", age: 22})
+    db.userinfo.find().limit(5);
 ```
+- 查询指定列name age数据, age > 25
+```
+    db.userinfo.find({age: {$gt: 25}}, {name: 1, age: 1});
+```
+- 按照年龄升序 1升序 -1降序
+```
+    db.userinfo.find().sort({age: 1});
+    db.userinfo.find().sort({age: -1});
+```
+
+
+
