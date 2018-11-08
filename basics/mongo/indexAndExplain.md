@@ -11,5 +11,6 @@
 ```
 - 删除索引命令
 ```
-    db.user,dropIndex({username: 1});
+    db.user.dropIndex({username: 1});
+    数字
 ```
