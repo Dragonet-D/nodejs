@@ -27,3 +27,8 @@
         db.user.ensureIndex({username: 1}, {name: "userindex"});
         随着集合的增长,需要针对查询中大量的排序做索引.如果没有对索引的键调用sort,MongoDB需要将所有数据提取到内存并排序.因此在做无索引排序时,如果数据量过大以至无法再内存中进行排序,此时MongoDB将会报错;
 ```
+- 唯一索引
+```
+    在缺省情况下创建的索引均不是唯一索引, 下面的示例将创建唯一的索引;
+    db.user.ensureIndex({userid: 1}, {unique: true})
+```
