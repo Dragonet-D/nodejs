@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
+    "mongodb": "^3.1.10",
     "supervisor": "^0.12.0"
   }
 }
