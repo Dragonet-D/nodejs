@@ -32,3 +32,22 @@
     在缺省情况下创建的索引均不是唯一索引, 下面的示例将创建唯一的索引;
     db.user.ensureIndex({userid: 1}, {unique: true})
 ```
+- db.user.insert({"userid": 5});
+如果文档中不包含userid键, 那么该文档的值为null,如果多次插入类似的文档,MongoDB将会报出同样的错误;
+- db.user.remove({});
+删除表的全部数据;
+- db.user.ensureIndex({name: 1}, {unique:true});
+保证唯一索引, 要是字段值重复会报错;
+
+#### 索引的一些参数
+- background (Boolean)
+建索引过程会阻塞其他数据库, background可指定以后台方式创建索引,即增加"background"可选参数,"background"默认值为false;
+- unique (Boolean)
+建立的索引是否唯一.指定为true创建唯一索引, 默认是false
+- name (string) 
+索引的名称.如果未指定,MongoDB会通过连接索引的字段和排序生成一个索引名称;
+- dropDups (Boolean)
+在建立唯一索引时是否删除重复记录, 指定true创建唯一索引.默认值为false;
+   
+
+
