@@ -49,5 +49,8 @@
 - dropDups (Boolean)
 在建立唯一索引时是否删除重复记录, 指定true创建唯一索引.默认值为false;
    
+### 使用explain
+- db.user.find({name: "maomaogou"}).explain("executionStats");
+关注输出如下数值: explain.executionStats.executionTimeMillis;
 
 
