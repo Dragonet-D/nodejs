@@ -4,8 +4,12 @@ const session = require("express-session");
 
 app.use(session({
   secret: "this is string key",
-  resave: false,
-  saveUninitialized: true
+  resave: false, // 强制保存session
+  saveUninitialized: true, // /强制将未初始化的session存储, 默认是true, 建议设置成true
+  name: "session_id", // 表示保存在本地cookies的名字
+  cookie: {
+    maxAge: 10000, // 过期时间
+  }
 }));
 
 app.get("/", (req, res) => {
