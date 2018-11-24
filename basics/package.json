@@ -14,5 +14,8 @@
     "express-session": "^1.15.6",
     "mongodb": "^3.1.10",
     "supervisor": "^0.12.0"
+  },
+  "devDependencies": {
+    "connect-mongo": "^2.0.2"
   }
 }
