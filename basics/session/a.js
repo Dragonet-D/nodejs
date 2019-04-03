@@ -16,7 +16,7 @@ app.use(session({
   rolling: true, // 每次请求强行重置cookies(设置的10分钟过期, 十分钟期间有操作不过期,以没有操作的时候计算)
   store: new MongoStore({
     url,
-    touchAction: 24 * 3600
+    touchAfter: 24 * 3600
   })
 }));
 
