@@ -7,3 +7,7 @@ console.log(bf3);
 console.log(bf3.toString('utf-8', 1));
 
 console.log(bf.toJSON());
+
+const bff = Buffer.from(str);
+const bff3 = Buffer.from('妙味');
+console.log(bff3.toString('utf-8', 1))
