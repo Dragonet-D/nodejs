@@ -11,4 +11,4 @@ ls.stderr.on('data', data => {
 
 ls.on('close', code => {
   console.log(`子进程退出,使用退出码${code}`)
-})
+});
