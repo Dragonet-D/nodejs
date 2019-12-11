@@ -17,8 +17,8 @@ if (cluster.isMaster) {
   // 工作进程可以共享任何 TCP 连接
   // 本实例中共享的是 HTTP 服务器
   http.createServer((req, res) => {
-    res.writeHead(200)
+    res.writeHead(200);
     res.end('hello world \n')
-  }).listen(8080)
+  }).listen(8080);
   console.log(`工作进程${process.pid}已启动`)
 }
