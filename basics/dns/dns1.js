@@ -13,4 +13,4 @@ dns.resolve4('archive.org', (err, addresses) => {
     console.log(`地址 ${item} 逆向解析到域名: ${JSON.stringify(hostnames)}`)
     })
   })
-})
+});
