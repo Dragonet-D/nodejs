@@ -1,8 +1,8 @@
 const dns = require('dns');
 
 dns.resolve4('archive.org', (err, addresses) => {
-  if (err) throw err
-  console.log(`地址: ${JSON.stringify(addresses)}`)
+  if (err) throw err;
+  console.log(`地址: ${JSON.stringify(addresses)}`);
 
   addresses.forEach(item => {
     dns.reverse(item, (err, hostnames) => {
