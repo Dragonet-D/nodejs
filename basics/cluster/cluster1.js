@@ -3,7 +3,7 @@ const http = require('http');
 const numCPUs = require('os').cpus().length;
 
 if (cluster.isMaster) {
-  console.log(`主进程${process.pid}正在运行`)
+  console.log(`主进程${process.pid}正在运行`);
 
   // 衍生工作进程
   for (let i = 0; i < numCPUs; i++) {
